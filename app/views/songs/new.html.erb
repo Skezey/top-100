@@ -1,2 +1,9 @@
-<h1>Songs#new</h1>
-<p>Find me in app/views/songs/new.html.erb</p>
+<h1><%= @sub.id ? 'Edit Sub' : 'Create Song' %></h1>
+
+<%= form_for @song do |f| %>
+  <%= f.label :name %>
+  <%= f.label :title %>
+  <%= f.label :year %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+  <%= f.submit %>
+<% end %>
