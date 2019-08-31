@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Artist.create(
+  name: 'Illenium',
+  rank: 1,
+  soundcloud_id: "27111815",
+)
+
+Song.create(
+  title: 'Sound of Walking Away',
+  year: '2017',
+  artist_id: 1
+)
