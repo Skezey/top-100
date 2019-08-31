@@ -1,13 +1,12 @@
 <h1>Artists</h1>
-<table class='artist-list'>
+<table>
   <tr>
     <th>Rank</th>
     <th>Artist</th>
   </tr>
-  <% @artists.each do |artist| %>
   <tr>
+    <% @artists.each do |artist| %>
       <td><%= artist.rank %></td>
       <td><%= link_to artist.name, artist %></td>
-  </tr>
     <% end %>
 </table>
