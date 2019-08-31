@@ -1,13 +1,15 @@
-<h1>Artists</h1>
-<table class='artist-list'>
-  <tr>
-    <th>Rank</th>
-    <th>Artist</th>
-  </tr>
-    <% @artists.each do |artist| %>
-    <tr>
-      <td><%= artist.rank %></td>
-      <td><%= link_to artist.name, artist %></td>
-    </tr>
-    <% end %>
-</table>
+<div class='container'>
+  <h1 class='artist-index-header'>Artists</h1>
+  <table class='artist-list'>
+    <thead>
+      <th>Rank</th>
+      <th>Artist</th>
+    </thead>
+      <% @artists.each do |artist| %>
+      <tbody>
+        <td><%= artist.rank %></td>
+        <td><%= link_to artist.name, artist %></td>
+      </tbody>
+      <% end %>
+  </table>
+</div>

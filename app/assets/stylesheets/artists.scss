@@ -1,12 +1,18 @@
-@import "bootstrap";
-
-
-.artist-list th{
-  width: 200;
+.artist-index-header{
   text-align: center;
 }
-.artist-list td{
-  width: 200;
+
+.artist-list{
+  position: relative;
+}
+
+.artist-list th{
+  width: 400px;
+  text-align: center;
+}
+
+.artist-list tbody{
+  width: 400px;
   text-align: center;
 }
 
