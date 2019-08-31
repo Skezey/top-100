@@ -16,5 +16,5 @@ Artist.create(
 Song.create(
   title: 'Sound of Walking Away',
   year: '2017',
-  artist_id: 1
+  artist_id: Artist.find_by(name: 'Illenium').id
 )
