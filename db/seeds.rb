@@ -11,6 +11,7 @@ Artist.create(
   name: 'Illenium',
   rank: 1,
   soundcloud_id: "27111815",
+  homepage: 'https://illenium.com/'
 )
 
 Song.create(
