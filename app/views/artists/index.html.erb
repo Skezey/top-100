@@ -1,15 +1,21 @@
-<div class='container'>
-  <h1 class='artist-index-header'>Artists</h1>
-  <table class='artist-list'>
-    <thead>
-      <th>Rank</th>
-      <th>Artist</th>
-    </thead>
-      <% @artists.each do |artist| %>
-      <tbody>
-        <td><%= artist.rank %></td>
-        <td><%= link_to artist.name, artist %></td>
-      </tbody>
-      <% end %>
-  </table>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron artist-index-header">
+        <table class='artist-list center'>
+          <h1>Artists</h1>
+          <thead>
+            <th>Rank</th>
+            <th>Artist</th>
+          </thead>
+            <% @artists.each do |artist| %>
+            <tbody>
+              <td class='rank'><%= artist.rank %></td>
+              <td class='name'><%= link_to artist.name, artist %></td>
+            </tbody>
+            <% end %>
+        </table>
+			</div>
+		</div>
+	</div>
 </div>

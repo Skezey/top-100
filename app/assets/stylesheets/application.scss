@@ -14,3 +14,23 @@
 @import 'bootstrap';
 @import 'artists';
 @import 'songs';
+
+.nav-item {
+  margin-top: 15px;
+  color: black;
+}
+
+
+.home-video{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+}
