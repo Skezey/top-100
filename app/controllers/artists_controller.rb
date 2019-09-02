@@ -32,7 +32,7 @@ class ArtistsController < ApplicationController
   private
 
   def artist_params
-    params.require(:artist).permit(:name, :rank)
+    params.require(:artist).permit(:name, :rank, :main_img, :background_img)
   end
 
   def set_artist

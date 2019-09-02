@@ -1,4 +1,5 @@
 <div class='container'>
+<div class="form">
   <h1><%= @artist.id ? ('Edit Artist') : ('Create Artist') %></h1>
   <%= form_for @artist do |f| %>
     <%= f.label :name %>
@@ -9,6 +10,11 @@
     <%= f.text_field :soundcloud_id %>
     <%= f.label :homepage %>
     <%= f.text_field :homepage %>
+    <%= f.label :main_img %>
+    <%= f.file_field :main_img %>
+    <%= f.label :background_img %>
+    <%= f.file_field :background_img %>
     <%= f.submit %>
   <% end %>
+</div>
 </div>
