@@ -1,10 +1,15 @@
+
 <div class="artist-index container-fluid">
+	<div class='background-img'>
+		<%= image_tag('background.jpg', :class => 'img-responsive main-background') %>
+			<%= image_tag('edmtop100.png', :class => 'img-responsive top100logo') %>
+	</div>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="jumbotron">
 				<div class='artist-index-body'>
-					<h1 class='artist-header'>Artists</h1>
 					<table class='artist-list center'>
+						<h1 class='artist-header'>Artists</h1>
 						<thead>
 							<th>Rank</th>
 							<th>Artist</th>
@@ -19,5 +24,15 @@
 					</div>
 			</div>
 		</div>
+	</div>
+	<div class='spotify-player'>
+	<iframe
+		src="https://open.spotify.com/embed/playlist/37i9dQZF1E8V4B91dQOtM6"
+		width="2000"
+		height="80"
+		frameborder="0"
+		allowtransparency="true"
+		allow="encrypted-media">
+	</iframe>
 	</div>
 </div>
