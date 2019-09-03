@@ -150,6 +150,10 @@ table.center {
 .tilt-logo {
 	width: 400px;
 	height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background: -moz-linear-gradient(45deg, #008000 0%, #00ffff 100%); /* ff3.6+ */
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #008000), color-stop(100%, #00ffff)); /* safari4+,chrome */
   background: -webkit-linear-gradient(45deg, #008000 0%, #00ffff 100%); /* safari5.1+,chrome10+ */
@@ -169,5 +173,10 @@ table.center {
 }
 
 .jumbotron{
-  background-color: black;
+  background-color: #254742;
+}
+
+.top-3-header{
+  color: white;
+  text-align: center;
 }
