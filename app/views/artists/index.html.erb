@@ -2,48 +2,59 @@
 	<div class='background-img'>
 		<%= image_tag('background.jpg', :class => 'img-responsive main-background') %>
 		<%= image_tag('edmtop100.png', :class => 'img-responsive top100logo') %>
-		<div class='nav-2'>
-			<h1>My current top 3</h1>
-		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<div class="jumbotron">
-				<div class='artist-index-body'>
-					<div class="container marketing">
-						<div class="row">
-							<div class="col-lg-4">
-								<%= image_tag('djanime.jpg', :class => "rounded-circle") %>
-								<h2>Dj AniMe</h2>
-								<p>
-									<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-								</p>
-							</div>
-							<div class="col-lg-4">
-								<%= image_tag('illenium.jpg', :class => "rounded-circle") %>
-								<h2>Illenium</h2>
-								<p>
-									<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-								</p>
-							</div>
-							<div class="col-lg-4">
-								<%= image_tag('excision.jpg', :class => "rounded-circle") %>
-								<h2>Excision</h2>
-								<p>
-									<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-								</p>
-							</div>
+			<div class="jumbotron artist-index-body">
+				<div class="row">
+				<div class="col-md-4 tilt tilt-logo" data-tilt="data-tilt" data-tilt-glare="true" data-tilt-scale="1.1">
+					<div class="container card-container">
+						<div class="card">
+							<%= image_tag('djanime.jpg', :class => "rounded-circle") %>
+							<h2>Dj AniMe</h2>
+							<p>
+								<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 tilt tilt-logo" data-tilt="data-tilt" data-tilt-glare="true" data-tilt-scale="1.1">
+					<div class="container card-container">
+						<div class="card">
+							<%= image_tag('excision.jpg', :class => "rounded-circle") %>
+							<h2>Excision</h2>
+							<p>
+								<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 tilt tilt-logo" data-tilt="data-tilt" data-tilt-glare="true" data-tilt-scale="1.1">
+					<div class="container card-container">
+						<div class="card">
+							<%= image_tag('illenium.jpg', :class => "rounded-circle") %>
+							<h2>Illenium</h2>
+							<p>
+								<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
+				</div>
 		</div>
 	</div>
-	<div class='spotify-player'>
-		<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E8V4B91dQOtM6" width="2000" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-	</div>
+</div>
+</div>
+<div class='spotify-player'>
+<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E8V4B91dQOtM6" width="2000" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script>
+window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+</script>
 <script src="../../../../assets/js/vendor/popper.min.js"></script>
 <script src="../../../../dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>

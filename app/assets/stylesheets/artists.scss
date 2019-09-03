@@ -15,7 +15,7 @@
 }
 
 .artist-index-body{
-  height: 100%;
+  width: 100%;
 }
 
 .artist-list{
@@ -135,4 +135,39 @@ table.center {
   width: 140px;
   height: 140px;
   border-radius: 50%;
+}
+
+.card-container{
+  margin-top: 40px;
+}
+
+.tilt {
+	box-shadow: 0 20px 27px rgba(0, 0, 0, 0.05);
+	transform-style: preserve-3d;
+	margin: 50px auto;
+}
+
+.tilt-logo {
+	width: 400px;
+	height: 400px;
+  background: -moz-linear-gradient(45deg, #008000 0%, #00ffff 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #008000), color-stop(100%, #00ffff)); /* safari4+,chrome */
+  background: -webkit-linear-gradient(45deg, #008000 0%, #00ffff 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(45deg, #008000 0%, #00ffff 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #008000 0%, #00ffff 100%); /* ie10+ */
+  background: linear-gradient(45deg, #008000 0%, #00ffff 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffff', endColorstr='#008000',GradientType=1 ); /* ie6-9 */
+}
+
+.tilt-logo-inner {
+	transform: translateZ(50px) translateY(-50%) translateX(-50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: white;
+	font-size: 1.9rem;
+}
+
+.jumbotron{
+  background-color: black;
 }

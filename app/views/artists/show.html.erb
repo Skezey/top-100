@@ -16,15 +16,14 @@
 				</p>
 			</div>
 		</div>
-		<div class="col-md-3">
-			<div class='top-five-songs'>
-				<h1 class= ''>Top 5 Songs</h1>
-			<ol class="t5list">
-				<% @artist.song.each do |song| %>
-					<li><%= song.title %></li>
-				<% end %>
-			</ol>
-			</div>
-		</div>
+		<div class="tilt tilt-logo" data-tilt data-tilt-glare="true" data-tilt-scale="1.1">
+		<span class="tilt-logo-inner">
+			tilt.js
+		</span>
+</div>
 	</div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+
+<!-- https://github.com/gijsroge/tilt.js -->
+<script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
