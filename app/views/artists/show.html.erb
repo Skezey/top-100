@@ -12,16 +12,18 @@
 					src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/<%= @artist.soundcloud_id %>&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
 					</iframe>
 				<p>
-					<%= link_to 'Artist Website', @artist.homepage, class: 'btn btn-dark btn-large' %>
+					<%= link_to 'Edit', edit_artist_path(@artist), class: 'btn btn-primary' %>
+					<%= link_to 'Delete', @artist, method: :delete, class: 'btn btn-primary' %>
 				</p>
 			</div>
 		</div>
 		<div class="col-md-3">
 			<div class='top-five-songs'>
 				<h1 class= 'underline artist-header'>Top 5 Songs</h1>
+				<%= link_to "Add Song", new_artist_song_path(@artist), class: 'btn btn-primary' %>
 			<ol class="t5list">
-				<% @artist.song.each do |song| %>
-					<li><%= song.title %></li>
+				<% @artist.songs.each do |song| %>
+					<li><%= link_to song.title, artist_song_path(song.id, @artist.id) %></li>
 				<% end %>
 			</ol>
 			</div>
