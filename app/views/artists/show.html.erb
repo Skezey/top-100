@@ -1,31 +1,23 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-9">
+		<div class="col-md-12">
 			<div class="jumbotron artist-music">
 				<h1 class='artist-header'><%= @artist.name %></h1>
-				<iframe
-					width="100%"
-					height="400"
-					scrolling="no"
-					frameborder="no"
-					allow="autoplay"
-					src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/<%= @artist.soundcloud_id %>&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-					</iframe>
+				<%= image_tag(@artist.background_img, :class => 'artist-background') %>
+				<div class="soundcloud-iframe">
+					<iframe
+						width="100%"
+						height="400"
+						scrolling="no"
+						frameborder="no"
+						allow="autoplay"
+						src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/<%= @artist.soundcloud_id %>&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+						</iframe>
+				</div>
 				<p>
 					<%= link_to 'Edit', edit_artist_path(@artist), class: 'btn btn-primary' %>
 					<%= link_to 'Delete', @artist, method: :delete, class: 'btn btn-primary' %>
 				</p>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class='top-five-songs'>
-				<h1 class= 'underline artist-header'>Top 5 Songs</h1>
-				<%= link_to "Add Song", new_artist_song_path(@artist), class: 'btn btn-primary' %>
-			<ol class="t5list">
-				<% @artist.songs.each do |song| %>
-					<li><%= link_to song.title, artist_song_path(song.id, @artist.id) %></li>
-				<% end %>
-			</ol>
 			</div>
 		</div>
 	</div>

@@ -1,23 +1,51 @@
 <div class="artist-index container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="jumbotron">
-				<div class='artist-index-body'>
-					<h1 class='artist-header'>Artists</h1>
-					<table class='artist-list center'>
-						<thead>
-							<th>Rank</th>
-							<th>Artist</th>
-						</thead>
-						<% @artists.each do |artist| %>
-							<tbody>
-								<td class='rank'><%= artist.rank %></td>
-								<td class='name'><%= link_to artist.name, artist %></td>
-							</tbody>
-						<% end %>
-					</table>
-					</div>
+	<div class='background-img'>
+		<%= image_tag('background.jpg', :class => 'img-responsive main-background') %>
+		<%= image_tag('edmtop100.png', :class => 'img-responsive top100logo') %>
+	</div>
+	<div class='jumbotron artist-jumbotron'>
+		<h1 class='top-3-header'>Top 3 Artists</h1>
+		<div class="row">
+			<div class='col-md-1'></div>
+			<div class='col-md-1'></div>
+			<div class="col-md-2 tilt tilt-logo" data-tilt="data-tilt" data-tilt-glare="true" data-tilt-scale="1.1">
+				<div class="container tilt-logo-inner">
+					<%= image_tag(@artists.find_by(rank: 1).main_img, :class => "rounded-circle img-responsive") %>
+					<h2><%= @artists.find_by(rank: 1).name %></h2>
+					<p>
+						<%= link_to 'View details', @artists.find_by(rank: 1), class: "btn btn-secondary" %>
+					</p>
+				</div>
 			</div>
+			<div class='col-md-1'></div>
+			<div class="col-md-2 tilt tilt-logo" data-tilt="data-tilt" data-tilt-glare="true" data-tilt-scale="1.1">
+				<div class="container tilt-logo-inner">
+					<%= image_tag(@artists.find_by(rank: 2).main_img, :class => "rounded-circle img-responsive") %>
+					<h2><%= @artists.find_by(rank: 2).name %></h2>
+					<p>
+						<%= link_to 'View details', @artists.find_by(rank: 2), class: "btn btn-secondary" %>
+					</p>
+				</div>
+			</div>
+			<div class='col-md-1'></div>
+			<div class="col-md-2 tilt tilt-logo" data-tilt="data-tilt" data-tilt-glare="true" data-tilt-scale="1.1">
+				<div class="container tilt-logo-inner">
+					<%= image_tag(@artists.find_by(rank: 3).main_img, :class => "rounded-circle img-responsive") %>
+					<h2><%= @artists.find_by(rank: 3).name %></h2>
+					<p>
+						<%= link_to 'View details', @artists.find_by(rank: 3), class: "btn btn-secondary" %>
+					</p>
+				</div>
+			</div>
+			<div class='col-md-1'></div>
+			<div class='col-md-1'></div>
 		</div>
 	</div>
 </div>
+<div class='spotify-player'>
+	<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E8V4B91dQOtM6" width="2000" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
