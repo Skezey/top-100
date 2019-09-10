@@ -15,10 +15,10 @@
 						</iframe>
 				</div>
 				<p>
-					<%= link_to 'Artist Website', @artist.homepage, class: 'btn btn-dark btn-large' %>
+					<%= link_to 'Edit', edit_artist_path(@artist), class: 'btn btn-primary' %>
+					<%= link_to 'Delete', @artist, method: :delete, class: 'btn btn-primary' %>
 				</p>
 			</div>
 		</div>
-</div>
 	</div>
 </div>
